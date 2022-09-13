@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- element-plus默认是英文，使用顶层组件，改变所有组件的语言为中文 -->
     <el-config-provider :locale="zhCn">
       <router-view></router-view>
     </el-config-provider>
