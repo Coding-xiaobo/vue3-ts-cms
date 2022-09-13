@@ -45,19 +45,16 @@ const login: Module<ILoginState, IRootState> = {
       // 1.用户登录
       const loginResult = await accountLoginRequest(account)
       const { id, token } = loginResult
-      console.log(id, token)
       commit('saveToken', token)
       localCache.setCache('token', token)
 
       // 2.获取用户信息
       const userInfo = await getUserById(id)
-      console.log(userInfo)
       commit('saveUserInfo', userInfo)
       localCache.setCache('userInfo', userInfo)
 
       // 3.用户菜单树
       const userMenus = await getUserMenus(userInfo.role.id)
-      console.log(userMenus)
       commit('saveUserMenus', userMenus)
       localCache.setCache('userMenus', userMenus)
 

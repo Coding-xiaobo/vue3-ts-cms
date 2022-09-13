@@ -1,8 +1,8 @@
-import HYRequest from './request/request'
+import MyRequest from './request/request'
 import { API_BASE_URL, TIME_OUT } from './request/config'
 import localCache from '@/utils/cache'
 
-const myRequest = new HYRequest({
+const myRequest = new MyRequest({
   baseURL: API_BASE_URL,
   timeout: TIME_OUT,
   interceptorHooks: {
