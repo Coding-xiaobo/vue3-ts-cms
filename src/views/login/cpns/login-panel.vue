@@ -8,12 +8,6 @@
         </template>
         <login-account v-model="account" ref="accountRef" />
       </el-tab-pane>
-      <el-tab-pane name="phone">
-        <template #label>
-          <span><i class="el-icon-mobile-phone"></i> 手机登录</span>
-        </template>
-        <login-phone ref="formRef" />
-      </el-tab-pane>
     </el-tabs>
     <div class="control-account">
       <el-checkbox v-model="isKeep">记住密码</el-checkbox>
@@ -28,12 +22,9 @@ import { defineComponent, reactive, ref } from 'vue'
 import localCache from '@/utils/cache'
 
 import LoginAccount from './login-account.vue'
-import LoginPhone from './login-phone.vue'
-
 export default defineComponent({
   components: {
-    LoginAccount,
-    LoginPhone
+    LoginAccount
   },
   setup() {
     const currentTab = ref('account')
