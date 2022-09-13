@@ -12,33 +12,33 @@
     <!-- 2.中间图标 -->
     <el-row :gutter="10">
       <el-col :span="7">
-        <hy-card title="分类商品数量(饼图)">
+        <my-card title="分类商品数量(饼图)">
           <pie-echart :pieData="categoryGoodsCount"></pie-echart>
-        </hy-card>
+        </my-card>
       </el-col>
       <el-col :span="10">
-        <hy-card title="不同城市商品销量">
+        <my-card title="不同城市商品销量">
           <map-echart :mapData="addressGoodsSale"></map-echart>
-        </hy-card>
+        </my-card>
       </el-col>
       <el-col :span="7">
-        <hy-card title="分类商品数量(玫瑰图)">
+        <my-card title="分类商品数量(玫瑰图)">
           <rose-echart :roseData="categoryGoodsCount"></rose-echart>
-        </hy-card>
+        </my-card>
       </el-col>
     </el-row>
 
     <!-- 3.底部图标 -->
     <el-row :gutter="10" class="row">
       <el-col :span="12">
-        <hy-card title="分类商品的销量">
+        <my-card title="分类商品的销量">
           <line-echart v-bind="categoryGoodsSale"></line-echart>
-        </hy-card>
+        </my-card>
       </el-col>
       <el-col :span="12">
-        <hy-card title="分类商品的收藏">
+        <my-card title="分类商品的收藏">
           <bar-echart v-bind="categoryGoodsSale"></bar-echart>
-        </hy-card>
+        </my-card>
       </el-col>
     </el-row>
   </div>
@@ -49,13 +49,13 @@ import { defineComponent, computed } from 'vue'
 import { useStore } from '@/store'
 
 import StatisticalPanel from '@/components/statistical-panel'
-import HyCard from '@/base-ui/card'
+import MyCard from '@/base-ui/card'
 import { PieEchart, MapEchart, RoseEchart, LineEchart, BarEchart } from '@/components/page-charts'
 
 export default defineComponent({
   name: 'dashboard',
   components: {
-    HyCard,
+    MyCard,
     StatisticalPanel,
     PieEchart,
     MapEchart,

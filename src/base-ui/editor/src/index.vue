@@ -1,5 +1,5 @@
 <template>
-  <div ref="editorRef" class="hy-editor" :style="{ width: width ? `${width}px` : '100%' }"></div>
+  <div ref="editorRef" class="my-editor" :style="{ width: width ? `${width}px` : '100%' }"></div>
 </template>
 
 <script lang="ts">
@@ -146,7 +146,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.hy-editor {
+.my-editor {
   text-align: left;
 }
 </style>

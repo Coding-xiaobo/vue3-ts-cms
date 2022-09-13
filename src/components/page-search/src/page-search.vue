@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hy-form v-bind="searchConfig" v-model="formData">
+    <my-form v-bind="searchConfig" v-model="formData">
       <template #footer>
         <div class="btns">
           <el-button size="medium" icon="el-icon-refresh" @click="handleResetClick">重置</el-button>
@@ -9,14 +9,14 @@
           >
         </div>
       </template>
-    </hy-form>
+    </my-form>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue'
 
-import HyForm, { IForm } from '@/base-ui/form'
+import MyForm, { IForm } from '@/base-ui/form'
 
 interface IFormData {
   [key: string]: any
@@ -24,7 +24,7 @@ interface IFormData {
 
 export default defineComponent({
   components: {
-    HyForm
+    MyForm
   },
   props: {
     searchConfig: {

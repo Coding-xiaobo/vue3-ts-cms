@@ -1,23 +1,23 @@
 <template>
   <div class="overview">
-    <hy-card title="关于">
+    <my-card title="关于">
       <div class="c-left">
         Vue3Admin 是基于 Vue3、Vuex、VueRouter、Vite、 ElementPlus 、TypeScript、Echart5
         等后台系统解决方案。
       </div>
-    </hy-card>
-    <hy-card title="技术栈">
-      <hy-text-link :text-arrs="technologyStacks" />
-      <hy-descriptions title="生产环境依赖" :column="2" :table-datas="dependencies" />
-      <hy-descriptions title="开发环境依赖" :column="2" :table-datas="devDependencies" />
-    </hy-card>
-    <hy-card title="项目结构">
+    </my-card>
+    <my-card title="技术栈">
+      <my-text-link :text-arrs="technologyStacks" />
+      <my-descriptions title="生产环境依赖" :column="2" :table-datas="dependencies" />
+      <my-descriptions title="开发环境依赖" :column="2" :table-datas="devDependencies" />
+    </my-card>
+    <my-card title="项目结构">
       <div class="c-left">
-        <hy-code language="bash" :code="projectDir" />
+        <my-code language="bash" :code="projectDir" />
       </div>
-    </hy-card>
-    <hy-card title="项目规范">
-      <hy-descriptions
+    </my-card>
+    <my-card title="项目规范">
+      <my-descriptions
         title="文件命名规范"
         :column="1"
         :table-datas="[
@@ -25,7 +25,7 @@
           { name: '文件(.ts .vue .json .d.ts)', description: '统一小写, 多个单词使用-分割' }
         ]"
       />
-      <hy-descriptions
+      <my-descriptions
         title="编写组件规范"
         :column="1"
         :table-datas="[
@@ -52,10 +52,10 @@
           }
         ]"
       />
-    </hy-card>
+    </my-card>
 
-    <hy-card title="Git提交规范">
-      <hy-descriptions
+    <my-card title="Git提交规范">
+      <my-descriptions
         :column="1"
         :table-datas="[
           { name: 'add 操作', description: 'git add ' },
@@ -64,25 +64,25 @@
           { name: 'push 操作', description: 'git push ' }
         ]"
       />
-    </hy-card>
+    </my-card>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import HyDescriptions from '@/base-ui/descriptions'
-import HyTextLink from '@/base-ui/text-link'
-import HyCode from '@/base-ui/code'
-import HyCard from '@/base-ui/card'
+import MyDescriptions from '@/base-ui/descriptions'
+import MyTextLink from '@/base-ui/text-link'
+import MyCode from '@/base-ui/code'
+import MyCard from '@/base-ui/card'
 
 import { technologyStacks, dependencies, devDependencies, projectDir } from './config'
 export default defineComponent({
   components: {
-    HyDescriptions,
-    HyCard,
-    HyTextLink,
-    HyCode
+    MyDescriptions,
+    MyCard,
+    MyTextLink,
+    MyCode
   },
 
   setup() {

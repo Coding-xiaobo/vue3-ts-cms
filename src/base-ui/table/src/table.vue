@@ -1,5 +1,5 @@
 <template>
-  <div class="hy-table">
+  <div class="my-table">
     <div class="header">
       <slot name="header">
         <div class="title">{{ title }}</div>

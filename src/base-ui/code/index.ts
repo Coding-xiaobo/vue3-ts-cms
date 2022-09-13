@@ -1,2 +1,2 @@
-import HyCode from './src/code.vue'
-export default HyCode
+import MyCode from './src/code.vue'
+export default MyCode

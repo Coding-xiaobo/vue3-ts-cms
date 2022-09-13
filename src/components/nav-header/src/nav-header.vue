@@ -7,7 +7,7 @@
     ></i>
 
     <div class="content">
-      <hy-breadcrumb :breadcrumbs="breadcrumbs" />
+      <my-breadcrumb :breadcrumbs="breadcrumbs" />
       <nav-info />
     </div>
   </div>
@@ -21,14 +21,14 @@ import { useStore } from '@/store'
 import { pathMapBreadcrumbs } from '@/utils/map-menu'
 
 import NavInfo from './nav-info.vue'
-import HyBreadcrumb from '@/base-ui/breadcrumb'
+import MyBreadcrumb from '@/base-ui/breadcrumb'
 
 import useMenuIcon from '../hooks/useMenuIconHook'
 
 export default defineComponent({
   components: {
     NavInfo,
-    HyBreadcrumb
+    MyBreadcrumb
   },
   emits: ['foldChange'],
   setup(props, ctx) {

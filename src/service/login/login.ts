@@ -1,4 +1,4 @@
-import hyRequest from '../index'
+import myRequest from '../index'
 
 import { Account, LoginInfo } from './types'
 
@@ -9,20 +9,20 @@ enum LoginAPI {
 }
 
 export function accountLoginRequest(account: Account) {
-  return hyRequest.post<LoginInfo>({
+  return myRequest.post<LoginInfo>({
     url: LoginAPI.AccountLogin,
     data: account
   })
 }
 
 export function getUserById(id: number) {
-  return hyRequest.get({
+  return myRequest.get({
     url: LoginAPI.UserInfo + id
   })
 }
 
 export function getUserMenus(id: number) {
-  return hyRequest.get({
+  return myRequest.get({
     url: LoginAPI.UserMenus + id + '/menu'
   })
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="page-content">
-    <hy-table
+    <my-table
       :totalCount="totalCount"
       :listData="pageListData"
       v-bind="contentConfig"
@@ -53,7 +53,7 @@
       <!-- <template #imageSlot="scope">
         <slot name="imageSlot" :row="scope.row"></slot>
       </template> -->
-    </hy-table>
+    </my-table>
   </div>
 </template>
 
@@ -62,11 +62,11 @@ import { defineComponent, ref, watch, computed } from 'vue'
 import { useStore } from '@/store'
 import { usePermission } from '@/hooks/usePermission'
 
-import HyTable from '@/base-ui/table'
+import MyTable from '@/base-ui/table'
 
 export default defineComponent({
   components: {
-    HyTable
+    MyTable
   },
   props: {
     contentConfig: {

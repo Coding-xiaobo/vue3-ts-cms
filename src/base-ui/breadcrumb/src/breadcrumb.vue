@@ -1,5 +1,5 @@
 <template>
-  <div class="hy-breadcrumb">
+  <div class="my-breadcrumb">
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <template v-for="item in breadcrumbs" :key="item.path">
         <el-breadcrumb-item :to="{ path: item.path }">

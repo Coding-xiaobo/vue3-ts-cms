@@ -7,7 +7,7 @@
       </el-tooltip>
     </div>
     <div class="content">
-      <hy-counter-up
+      <my-counter-up
         :number="panelData.number1"
         :option="panelData.amount === 'saleroom' ? counterOption2 : counterOption1"
       />
@@ -15,7 +15,7 @@
     <div class="footer">
       <span>
         {{ panelData.subtitle }}
-        <hy-counter-up
+        <my-counter-up
           :number="panelData.number2"
           :option="panelData.amount === 'saleroom' ? counterOption2 : counterOption1"
         />
@@ -26,11 +26,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HyCounterUp from '@/base-ui/count-up'
+import MyCounterUp from '@/base-ui/count-up'
 
 export default defineComponent({
   components: {
-    HyCounterUp
+    MyCounterUp
   },
   props: {
     panelData: {

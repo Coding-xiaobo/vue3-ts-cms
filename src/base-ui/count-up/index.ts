@@ -1,3 +1,3 @@
-import HyCouterUp from './src/countup.vue'
+import MyCouterUp from './src/countup.vue'
 
-export default HyCouterUp
+export default MyCouterUp
