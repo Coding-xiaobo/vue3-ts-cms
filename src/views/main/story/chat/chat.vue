@@ -14,7 +14,7 @@ export default defineComponent({
     MyEditor
   },
   setup() {
-    const htmlString = ref<string>('coderwhy')
+    const htmlString = ref<string>('hahaha')
     return {
       htmlString
     }

@@ -11,7 +11,7 @@ export const technologyStacks = [
 
   {
     title: '构建工具',
-    desp: 'Vite 2.x / Webpack5.x'
+    desp: 'Webpack5.x'
   },
 
   {
@@ -40,16 +40,6 @@ export const technologyStacks = [
   },
 
   {
-    title: '富文本',
-    desp: 'WangEditor'
-  },
-
-  {
-    title: '工具库',
-    desp: ' @vueuse/core + dayjs + countup.js'
-  },
-
-  {
     title: 'CSS 预编译',
     desp: 'Sass / Less'
   },
@@ -67,11 +57,6 @@ export const technologyStacks = [
   {
     title: '代码规范',
     desp: 'EditorConfig + Prettier + ESLint'
-  },
-
-  {
-    title: '提交规范',
-    desp: 'Commitizen + Commitlint'
   },
 
   {
